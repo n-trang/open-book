@@ -9,11 +9,14 @@ def lots_of_letters(word):
       >>> lots_of_letters('1')
       '1'
     """
+    new_word_list = []
     list_of_letter = enumerate(word)
     for set in list_of_letter:
         letter = set[1]
         number_of_times = set[0] +1
-        return (letter*number_of_times)
+        new_word_list.append(letter*number_of_times)
+    new_word = ''.join([str(ele) for ele in new_word_list])
+    return (new_word)
 
 def seperate_by_type(list_of_stuff):
     """
@@ -52,16 +55,17 @@ def only_evens(numbers):
     >>> only_evens(nums)
     [2, 4]
     >>> nums
-    [1, 2, 3, 4
+    [1, 2, 3, 4]
     """
     even_number = []
     for i in numbers:
-        if (i%2) == 0:
+        if i % 2 == 0:
             even_number.append(i)
         else:
             pass
     return even_number
 
+import math
 def gcf(m, n):
     """
       >>> gcf(10, 25)
@@ -73,4 +77,9 @@ def gcf(m, n):
       >>> gcf(24, 12)
       12
     """
+    return(math.gcd(m, n))
+
         
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()

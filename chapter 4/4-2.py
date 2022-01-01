@@ -1,5 +1,3 @@
-from tabulate import tabulate
-
 for x in range(2, 21, 1):
     if x % 2 == 0 and x % 3  == 0 :
         isdevisable = 'both'

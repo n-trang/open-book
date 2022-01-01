@@ -142,6 +142,34 @@ def num_even_digits(n):
       >>> num_even_digits(20)
       2
     """
+    string_number = str(n)
+    count = 0
+    for digit in string_number:
+      int_degit = int(digit)
+      if int_degit % 2 == 0:
+        count += 1
+    return count
+def sum_of_squares_of_digits(n):
+    """
+      >>> sum_of_squares_of_digits(1)
+      1
+      >>> sum_of_squares_of_digits(9)
+      81
+      >>> sum_of_squares_of_digits(11)
+      2
+      >>> sum_of_squares_of_digits(121)
+      6
+      >>> sum_of_squares_of_digits(987)
+      194
+    """
+    string_number = str(n)
+    sum_square = 0
+    for digit in string_number:
+      int_digit = int(digit)
+      sum_square += int_digit ** 2
+    return sum_square
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
